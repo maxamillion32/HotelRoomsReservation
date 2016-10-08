@@ -6,16 +6,9 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.hotel.hotelroomreservation.R;
-import com.hotel.hotelroomreservation.model.Room;
-import com.hotel.hotelroomreservation.model.Rooms;
-import com.hotel.hotelroomreservation.model.ServerAddresses;
-
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.web.client.RestTemplate;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -25,19 +18,13 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;
 
-/**
- * Created by Ania on 29.09.2016.
- */
 public class RoomsViewActivity extends AppCompatActivity {
 
     @Override
@@ -48,7 +35,7 @@ public class RoomsViewActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        new HttpRequestTask().execute(new Pair<Context, String>(this, "Manfred"));
+        new HttpRequestTask().execute(new Pair<Context, String>(this, "Hanna"));
     }
 
     private class HttpRequestTask extends AsyncTask<Pair<Context, String>, Void, String> {

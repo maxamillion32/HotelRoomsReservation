@@ -9,7 +9,7 @@ package com.hotel.hotelroomreservation.backend;
 import java.io.IOException;
 import javax.servlet.http.*;
 
-public class MyServlet extends HttpServlet {
+public class RoomsServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
